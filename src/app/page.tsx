@@ -11,6 +11,9 @@ export default function Home() {
 
   return (
     <motion.main ref={constraintsRef}  className={styles.main}>
+      <header>
+        <h1>A SAMPLE HEADER</h1>
+      </header>
       <Card dragConstraint={constraintsRef} />
       <Card dragConstraint={constraintsRef} />
       <Card dragConstraint={constraintsRef} />

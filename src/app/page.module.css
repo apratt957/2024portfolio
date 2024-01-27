@@ -19,6 +19,7 @@
   align-items: flex-start;
   border-radius: 6px;
   z-index: 1;
+  top: 40vh;
 }
 
 .card:hover {
