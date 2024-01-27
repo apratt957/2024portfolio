@@ -7,6 +7,12 @@
   min-height: 100vh;
 }
 
+.card {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
 /* Mobile */
 /* @media (max-width: 700px) {
   
