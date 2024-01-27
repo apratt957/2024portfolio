@@ -7,9 +7,22 @@
 }
 
 .card {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  padding: 20px;
   border: 2px solid black;
-  border-radius: 10px;
-  padding: 2rem;
+  background-color: #fff;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.card:hover {
+  z-index: 2;
 }
 
 /* Mobile */

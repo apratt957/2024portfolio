@@ -11,6 +11,8 @@ export default function Home() {
   return (
     <motion.main ref={constraintsRef}  className={styles.main}>
       <motion.div drag dragConstraints={constraintsRef} className={styles.card}>A card</motion.div>
+      <motion.div drag dragConstraints={constraintsRef} className={styles.card}>A card</motion.div>
+      <motion.div drag dragConstraints={constraintsRef} className={styles.card}>A card</motion.div>
     </motion.main>
   );
 }
