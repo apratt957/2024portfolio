@@ -13,7 +13,6 @@ export default function Home() {
 
   const handleCardClick = () => {
     if (!isPopped) setIsPopped(true)
-    console.log('hello')
   }
 
   return (
@@ -21,11 +20,11 @@ export default function Home() {
       <header>
         <h1>Hello! My name is Andrew Pratt. I'm a developer, game creator, and designer/illustrator living in Chicago. I value simple, clean designs and user interfaces and I love working on both the design and development sides of projects.</h1>
       </header>
-      {!isPopped ? <Card dragConstraint={constraintsRef} title={'My work?'} handleClick={handleCardClick} /> :
+      {!isPopped ? <Card isPopped={isPopped} dragConstraint={constraintsRef} title={'My work?'} handleClick={handleCardClick} /> :
         <Fragment>
-          <Card dragConstraint={constraintsRef} title={'My work!'} handleClick={handleCardClick} />
-          <Card dragConstraint={constraintsRef} title={'My work!'} handleClick={handleCardClick} />
-          <Card dragConstraint={constraintsRef} title={'My work!'} handleClick={handleCardClick} />
+          <Card isPopped={isPopped} dragConstraint={constraintsRef} title={'My work!'} handleClick={handleCardClick} />
+          <Card isPopped={isPopped} dragConstraint={constraintsRef} title={'My work!'} handleClick={handleCardClick} />
+          <Card isPopped={isPopped} dragConstraint={constraintsRef} title={'My work!'} handleClick={handleCardClick} />
         </Fragment>
       }
     </motion.main>
