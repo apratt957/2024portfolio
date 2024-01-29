@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Fragment, useRef, useState } from "react"
+import { work } from "./work"
 import Card from "./card"
 import styles from "./page.module.css"
 
@@ -18,13 +19,20 @@ export default function Home() {
   return (
     <motion.main ref={constraintsRef}  className={styles.main}>
       <header>
-        <h1>Hello! My name is Andrew Pratt. I'm a developer, game creator, and designer/illustrator living in Chicago. I value simple, clean designs and user interfaces and I love working on both the design and development sides of projects.</h1>
+        <h1>My name is Andrew Pratt. I'm a developer/designer and game creator living in Chicago. I value clean design and user interfaces that bring joy and utility to the web.</h1>
       </header>
-      {!isPopped ? <Card isPopped={isPopped} dragConstraint={constraintsRef} title={'My work?'} handleClick={handleCardClick} /> :
+      {!isPopped ? <Card isPopped={isPopped} dragConstraint={constraintsRef} description={'My work?'} handleClick={handleCardClick} /> :
         <Fragment>
-          <Card isPopped={isPopped} dragConstraint={constraintsRef} title={'My work!'} handleClick={handleCardClick} />
-          <Card isPopped={isPopped} dragConstraint={constraintsRef} title={'My work!'} handleClick={handleCardClick} />
-          <Card isPopped={isPopped} dragConstraint={constraintsRef} title={'My work!'} handleClick={handleCardClick} />
+          {work.map((project, index) => {
+            return <Card key={index}
+              isPopped={isPopped}
+              dragConstraint={constraintsRef}
+              title={project.title}
+              description={project.description}
+              xAnimate={project.xAnimate}
+              yAnimate={project.yAnimate}
+              handleClick={handleCardClick} />
+          })}
         </Fragment>
       }
     </motion.main>
