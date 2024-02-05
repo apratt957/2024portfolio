@@ -18,6 +18,7 @@ export default function Card(props: CardProps) {
             animate={props.isPopped ? { x: props.xAnimate, y: props.yAnimate } : {}}
             drag
             dragConstraints={props.dragConstraint}
+            whileHover={{ scale: 1.05 }}
             className={styles.card}
             onClick={props.handleClick}
         >
