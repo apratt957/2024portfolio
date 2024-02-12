@@ -6,7 +6,7 @@ export default function KeepingTime() {
 
   return (
     <WorkLayout>
-      <Header backgroundColor="red">Keeping Time</Header>
+      <Header backgroundColor="red" color="white">Keeping Time</Header>
       <div className={styles.info}>some random info</div>
     </WorkLayout>
   );
