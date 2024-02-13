@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Fragment, useRef, useState } from "react";
 import { work } from "./work";
+import { colors } from "@/helpers";
 import Card from "./card";
 import styles from "./page.module.css";
 
@@ -28,6 +29,7 @@ export default function Home() {
           isPopped={isPopped}
           dragConstraint={constraintsRef}
           description={"My work?"}
+          backgroundColor={colors.pink}
           handleClick={handleCardClick}
         />
       ) : (
@@ -43,6 +45,7 @@ export default function Home() {
                   description={project.description}
                   xAnimate={project.xAnimate}
                   yAnimate={project.yAnimate}
+                  backgroundColor={project.backgroundColor}
                   handleClick={handleCardClick}
                 />
               );

@@ -8,6 +8,7 @@ type CardProps = {
   dragConstraint: object;
   title?: string;
   description: string;
+  backgroundColor: string;
   handleClick: React.MouseEventHandler<HTMLElement>;
 };
 
@@ -17,7 +18,12 @@ export default function Card(props: CardProps) {
       animate={props.isPopped ? { x: props.xAnimate, y: props.yAnimate } : {}}
       drag
       dragConstraints={props.dragConstraint}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{
+        scale: 1.05,
+        backgroundColor: props.backgroundColor,
+        color: "white",
+        transition: { duration: 0.3 },
+      }}
       className={styles.card}
       onClick={props.handleClick}
     >
