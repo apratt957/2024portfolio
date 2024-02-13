@@ -20,8 +20,7 @@ export default function Home() {
       <header>
         <h1>
           My name is Andrew Pratt. I'm a developer/designer and game creator
-          living in Chicago. I value clean design and user interfaces that bring
-          joy and utility to the web.
+          living in Chicago. I like to make toys and tools online.
         </h1>
       </header>
       {!isPopped ? (
@@ -34,18 +33,19 @@ export default function Home() {
       ) : (
         <Fragment>
           {work.map((project, index) => {
-            return (
-              <Card
-                key={index}
-                isPopped={isPopped}
-                dragConstraint={constraintsRef}
-                title={project.title}
-                description={project.description}
-                xAnimate={project.xAnimate}
-                yAnimate={project.yAnimate}
-                handleClick={handleCardClick}
-              />
-            );
+            if (project.title !== "My Work")
+              return (
+                <Card
+                  key={index}
+                  isPopped={isPopped}
+                  dragConstraint={constraintsRef}
+                  title={project.title}
+                  description={project.description}
+                  xAnimate={project.xAnimate}
+                  yAnimate={project.yAnimate}
+                  handleClick={handleCardClick}
+                />
+              );
           })}
         </Fragment>
       )}
