@@ -20,7 +20,7 @@
   align-items: center;
   border-radius: 6px;
   z-index: 1;
-  top: 40vh;
+  top: 50vh;
 }
 
 .card > div {
@@ -29,10 +29,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.card:hover {
-  z-index: 2;
 }
 
 /* Mobile */
