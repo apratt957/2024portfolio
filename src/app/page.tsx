@@ -1,14 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { work } from "./work";
-import { colors } from "@/helpers";
+import { colors, getRandom } from "@/helpers";
 import Card from "./card";
 import styles from "./page.module.css";
 
 export default function Home() {
   const [isPopped, setIsPopped] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    setWindowHeight(window.innerHeight);
+  }, []);
 
   const constraintsRef = useRef(null);
 
@@ -43,8 +50,8 @@ export default function Home() {
                   dragConstraint={constraintsRef}
                   title={project.title}
                   description={project.description}
-                  xAnimate={project.xAnimate}
-                  yAnimate={project.yAnimate}
+                  xAnimate={getRandom(windowWidth)}
+                  yAnimate={getRandom(windowHeight)}
                   backgroundColor={project.backgroundColor}
                   handleClick={handleCardClick}
                 />

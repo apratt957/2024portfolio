@@ -1,4 +1,5 @@
-export const getRandom = () => Math.ceil((Math.random() - 0.5) * 2 * 300);
+export const getRandom = (windowBound: number) =>
+  Math.ceil((Math.random() - 0.5) * 2 * (windowBound / 4));
 
 export const findCurrentProject = (
   projectTitle: string,
