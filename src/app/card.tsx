@@ -24,11 +24,20 @@ export default function Card(props: CardProps) {
         color: "white",
         transition: { duration: 0.3 },
       }}
+      whileTap={{
+        backgroundColor: props.backgroundColor,
+        color: "white",
+        transition: { duration: 0.3 },
+      }}
       className={styles.card}
       onClick={props.handleClick}
     >
-      <h1>{props.description}</h1>
-      <p>{props.title}</p>
+      <div className={styles.h1Container}>
+        <h1 className={styles.cardDescription}>{props.description}</h1>
+      </div>
+      <div className={styles.titleContainer}>
+        <p className={styles.cardTitle}>{props.title}</p>
+      </div>
     </motion.article>
   );
 }
