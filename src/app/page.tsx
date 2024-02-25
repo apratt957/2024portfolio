@@ -29,6 +29,7 @@ export default function Home() {
           My name is Andrew Pratt. I'm a developer/designer and game creator
           living in Chicago. I like to make toys and tools online.
         </h1>
+        <p>section where all the links and images will go</p>
       </header>
       <Fragment>
         {work.map((project, index) => (
