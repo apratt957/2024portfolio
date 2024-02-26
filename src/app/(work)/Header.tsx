@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import styles from "./page.module.css";
 
 interface HeaderProps {
   backgroundColor: string;
@@ -11,7 +12,11 @@ const Header: React.FC<HeaderProps> = ({
   color,
   children,
 }) => {
-  return <div style={{ backgroundColor, color }}>{children}</div>;
+  return (
+    <div className={styles.workHeader} style={{ backgroundColor, color }}>
+      {children}
+    </div>
+  );
 };
 
 export default Header;

@@ -11,10 +11,12 @@ export default function KeepingTime() {
   };
   return (
     <WorkLayout>
-      <Header backgroundColor={currentProject.backgroundColor} color="white">
-        Keeping Time
-      </Header>
-      <div className={styles.content}>some random info</div>
+      <div className={styles.container}>
+        <Header backgroundColor={currentProject.backgroundColor} color="white">
+          Keeping Time
+        </Header>
+        <div className={styles.content}>some random info</div>
+      </div>
     </WorkLayout>
   );
 }

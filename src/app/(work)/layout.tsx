@@ -17,14 +17,9 @@ export default function WorkLayout({ children }: WorkLayoutProps) {
   );
 
   return (
-    <div>
+    <React.Fragment>
       {headerContent}
-      <div className="content">{content}</div>
-      <style jsx>{`
-        .content {
-          margin: 20px;
-        }
-      `}</style>
-    </div>
+      {content}
+    </React.Fragment>
   );
 }
