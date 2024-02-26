@@ -23,6 +23,14 @@
   top: 50vh;
 }
 
+.cardDescription {
+  cursor: pointer;
+}
+
+.cardDescription:hover {
+  text-decoration: underline;
+}
+
 .card > div {
   flex: 1;
   margin: 0;

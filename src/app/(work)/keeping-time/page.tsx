@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function KeepingTime() {
   const handleBackButtonClick = () => {
-    window.history.back();
+    window.location.href = "/";
   };
 
   const projectName = "Keeping Time";

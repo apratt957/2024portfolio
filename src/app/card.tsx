@@ -11,6 +11,9 @@ type CardProps = {
 };
 
 export default function Card(props: CardProps) {
+  const handleCardClick = () => {
+    window.location.href = `/${props.title.toLowerCase().split(" ").join("-")}`;
+  };
   return (
     <motion.article
       initial={{ opacity: 0 }}
@@ -33,7 +36,9 @@ export default function Card(props: CardProps) {
       className={styles.card}
     >
       <div className={styles.h1Container}>
-        <h1 className={styles.cardDescription}>{props.description}</h1>
+        <h1 className={styles.cardDescription} onClick={handleCardClick}>
+          {props.description}
+        </h1>
       </div>
       <div className={styles.titleContainer}>
         <p className={styles.cardTitle}>{props.title}</p>
