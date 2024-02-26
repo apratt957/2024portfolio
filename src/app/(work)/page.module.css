@@ -6,8 +6,9 @@
 
 .back {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
 }
 
 .workHeader {
@@ -23,11 +24,11 @@
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex: 1.2;
   background-color: #fdf6ed;
   margin: 0;
   padding: 24px;
+  overflow: scroll;
 }
 
 /* Mobile */
