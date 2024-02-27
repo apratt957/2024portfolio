@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 
-const rubik = Rubik({ subsets: ["latin"] });
+const googleFont = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Andrew Pratt Portfolio",
-  description: "A new portfolio... wow",
+  description: "Portfolio of Andrew Pratt, developer and designer",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={rubik.className}>{children}</body>
+      <body className={googleFont.className}>{children}</body>
     </html>
   );
 }
