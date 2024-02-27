@@ -1,44 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
 import styles from "../page.module.css";
 import { work } from "@/app/work";
 import { findCurrentProject } from "@/helpers";
-import Image from "next/image";
+import Header from "@/app/Header";
 
-export default function KeepingTime() {
-  const handleBackButtonClick = () => {
-    window.location.href = "/";
-  };
-
+export default function ProceduralJams() {
   const projectName = "Procedural Jams";
   const currentProject = findCurrentProject(projectName, work) as {
     title: string;
     description: string;
     backgroundColor: string;
+    githubLink: string;
+    githubLinkDescription: string;
   };
   return (
     <div className={styles.container}>
-      <header
-        className={styles.workHeader}
-        style={{
-          backgroundColor: currentProject.backgroundColor,
-          color: "white",
-        }}
-      >
-        <motion.div
-          className={styles.back}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.3 },
-          }}
-          onClick={handleBackButtonClick}
-        >
-          <Image src="/back.svg" alt="back" height={80} width={80} />
-        </motion.div>
-        <h1 className={styles.headerTitle}>{currentProject.title}</h1>
-        <div>{currentProject.description}</div>
-      </header>
+      <Header currentProject={currentProject} color="white" />
       <div className={styles.content}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet
