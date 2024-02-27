@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { work } from "./work";
-import { getRandom } from "@/helpers";
+import { getRandom, colors } from "@/helpers";
 import Card from "./card";
 import styles from "./page.module.css";
 
@@ -29,7 +29,24 @@ export default function Home() {
           My name is Andrew Pratt. I&apos;m a developer/designer and game
           creator living in Chicago. I like to make toys and tools online.
         </h1>
-        <p>section where all the links and images will go</p>
+        <div>
+          {" "}
+          <a
+            className={styles.link}
+            href="https://github.com/apratt957"
+            target="_blank"
+          >
+            Github
+          </a>{" "}
+          |{" "}
+          <a
+            className={styles.link}
+            href="https://www.linkedin.com/in/andrew-pratt957/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </div>
       </motion.header>
       <Fragment>
         {work.map((project, index) => (
