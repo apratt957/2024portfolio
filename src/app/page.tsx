@@ -37,6 +37,7 @@ export default function Home() {
             xAnimate={getRandom(windowWidth)}
             yAnimate={getRandom(windowHeight)}
             backgroundColor={project.backgroundColor}
+            color={project.color}
           />
         ))}
       </Fragment>
