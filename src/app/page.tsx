@@ -26,8 +26,8 @@ export default function Home() {
     <motion.main ref={constraintsRef} className={styles.main}>
       <header>
         <h1>
-          My name is Andrew Pratt. I'm a developer/designer and game creator
-          living in Chicago. I like to make toys and tools online.
+          My name is Andrew Pratt. I&apos;m a developer/designer and game
+          creator living in Chicago. I like to make toys and tools online.
         </h1>
         <p>section where all the links and images will go</p>
       </header>
