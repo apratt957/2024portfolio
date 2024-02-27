@@ -19,7 +19,6 @@ export default function Card(props: CardProps) {
     <motion.article
       initial={{ opacity: 0 }}
       animate={{ x: props.xAnimate, y: props.yAnimate, opacity: 1 }}
-      transition={{ delay: 0.2 }}
       drag
       dragConstraints={props.dragConstraint}
       whileHover={{
