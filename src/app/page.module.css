@@ -45,14 +45,12 @@
     width: 150px;
     height: 150px;
   }
-
   .cardDescription {
-    font-size: 1.2em;
     margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .cardTitle {
+    font-size: 0.8rem;
   }
 }
-
-/* Tablet and Smaller Desktop */
-/* @media (min-width: 701px) and (max-width: 1120px) {
-
-} */
