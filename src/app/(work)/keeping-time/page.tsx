@@ -19,16 +19,6 @@ export default function KeepingTime() {
   };
   return (
     <div className={styles.container}>
-      <motion.div
-        className={styles.back}
-        whileHover={{
-          scale: 1.1,
-          transition: { duration: 0.3 },
-        }}
-        onClick={handleBackButtonClick}
-      >
-        <Image src="/back.svg" alt="back" height={80} width={80} />
-      </motion.div>
       <header
         className={styles.workHeader}
         style={{
@@ -36,7 +26,17 @@ export default function KeepingTime() {
           color: "white",
         }}
       >
-        <h1>{currentProject.title}</h1>
+        <motion.div
+          className={styles.back}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.3 },
+          }}
+          onClick={handleBackButtonClick}
+        >
+          <Image src="/back.svg" alt="back" height={80} width={80} />
+        </motion.div>
+        <h1 className={styles.headerTitle}>{currentProject.title}</h1>
         <div>{currentProject.description}</div>
       </header>
       <div className={styles.content}>
