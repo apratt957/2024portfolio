@@ -39,6 +39,10 @@
     overflow: scroll;
   }
 
+  .workHeader {
+    max-width: unset;
+  }
+
   .headerTitle {
     margin-top: 120px;
   }
