@@ -21,6 +21,7 @@ export default function Home() {
   return (
     <motion.main ref={constraintsRef} className={styles.main}>
       <motion.header
+        className={styles.cta}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}

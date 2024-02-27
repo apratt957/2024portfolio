@@ -49,6 +49,11 @@
   text-decoration: underline;
 }
 
+.cta {
+  max-width: 900px;
+  margin: 25vh 15px 0;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .card {
@@ -62,5 +67,9 @@
 
   .cardTitle {
     font-size: 0.95rem;
+  }
+  .cta {
+    margin: 15vh 15px 0;
+    line-height: 3rem;
   }
 }
