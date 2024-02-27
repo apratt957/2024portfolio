@@ -4,17 +4,17 @@ import styles from "@/app/(work)/page.module.css";
 import Image from "next/image";
 
 interface HeaderProps {
-  color: string;
   currentProject: {
     title: string;
     description: string;
     githubLink: string;
     githubLinkDescription: string;
     backgroundColor: string;
+    color: string;
   };
 }
 
-const Header: React.FC<HeaderProps> = ({ color, currentProject }) => {
+const Header: React.FC<HeaderProps> = ({ currentProject }) => {
   const handleBackButtonClick = () => {
     window.location.href = "/";
   };
@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ color, currentProject }) => {
       className={styles.workHeader}
       style={{
         backgroundColor: currentProject.backgroundColor,
-        color,
+        color: currentProject.color,
       }}
     >
       <motion.div
@@ -38,7 +38,12 @@ const Header: React.FC<HeaderProps> = ({ color, currentProject }) => {
       </motion.div>
       <h1 className={styles.headerTitle}>{currentProject.title}</h1>
       <div>{currentProject.description}</div>
-      <a href={currentProject.githubLink} target="_blank">
+      <a
+        className={styles.githubLink}
+        href={currentProject.githubLink}
+        target="_blank"
+        style={{ color: currentProject.color }}
+      >
         {currentProject.githubLinkDescription}
       </a>
     </header>

@@ -11,12 +11,13 @@ export default function KeepingTime() {
     title: string;
     description: string;
     backgroundColor: string;
+    color: string;
     githubLink: string;
     githubLinkDescription: string;
   };
   return (
     <div className={styles.container}>
-      <Header color="white" currentProject={currentProject} />
+      <Header currentProject={currentProject} />
       <div className={styles.content}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet

@@ -21,6 +21,11 @@
   max-width: 460px;
 }
 
+.githubLink {
+  text-decoration: none;
+  margin-top: 10px;
+}
+
 .content {
   display: flex;
   flex-direction: column;

@@ -15,4 +15,5 @@ export const colors = {
   darkBlue: "#011936",
   green: "#295135",
   pink: "#ba3856",
+  offWhite: "#fdf6ed",
 };

@@ -11,12 +11,13 @@ export default function ProceduralJams() {
     title: string;
     description: string;
     backgroundColor: string;
+    color: string;
     githubLink: string;
     githubLinkDescription: string;
   };
   return (
     <div className={styles.container}>
-      <Header currentProject={currentProject} color="white" />
+      <Header currentProject={currentProject} />
       <div className={styles.content}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet

@@ -13,10 +13,11 @@ export default function CareRing() {
     backgroundColor: string;
     githubLink: string;
     githubLinkDescription: string;
+    color: string;
   };
   return (
     <div className={styles.container}>
-      <Header color="white" currentProject={currentProject} />
+      <Header currentProject={currentProject} />
       <div className={styles.content}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet
