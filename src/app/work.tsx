@@ -24,5 +24,7 @@ export const work = [
     color: colors.offWhite,
     githubLink: "https://github.com/apratt957/procgenjams",
     githubLinkDescription: "View on GitHub",
+    projectLink: "https://pedantic-curie-b51d34.netlify.app",
+    projectLinkDescription: "Give it a listen",
   },
 ];

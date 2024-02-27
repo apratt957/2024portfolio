@@ -21,9 +21,20 @@
   max-width: 460px;
 }
 
-.githubLink {
-  text-decoration: none;
+.githubLink,
+.projectLink {
+  display: inline;
   margin-top: 10px;
+}
+
+.githubLink > a,
+.projectLink > a {
+  text-decoration: none;
+}
+
+.githubLink > a:hover,
+.projectLink > a:hover {
+  text-decoration: underline;
 }
 
 .content {
