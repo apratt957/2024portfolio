@@ -31,8 +31,8 @@
   overflow: scroll;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
+/* Mobile && Tablet */
+@media (max-width: 1120px) {
   .container {
     flex-direction: column;
     justify-content: unset;
@@ -41,6 +41,7 @@
 
   .workHeader {
     max-width: unset;
+    padding: 24px 24px 72px 24px;
   }
 
   .headerTitle {

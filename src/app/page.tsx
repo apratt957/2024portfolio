@@ -18,10 +18,6 @@ export default function Home() {
 
   const constraintsRef = useRef(null);
 
-  const handleCardClick = () => {
-    console.log("click");
-  };
-
   return (
     <motion.main ref={constraintsRef} className={styles.main}>
       <header>
