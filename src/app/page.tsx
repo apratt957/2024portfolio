@@ -20,13 +20,17 @@ export default function Home() {
 
   return (
     <motion.main ref={constraintsRef} className={styles.main}>
-      <header>
+      <motion.header
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+      >
         <h1>
           My name is Andrew Pratt. I&apos;m a developer/designer and game
           creator living in Chicago. I like to make toys and tools online.
         </h1>
         <p>section where all the links and images will go</p>
-      </header>
+      </motion.header>
       <Fragment>
         {work.map((project, index) => (
           <Card
