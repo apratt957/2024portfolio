@@ -9,7 +9,9 @@ type CardProps = {
   description: string;
   backgroundColor: string;
   color: string;
-};
+  cardRef: (el: HTMLDivElement) => void;
+  onFocus: () => void;
+}
 
 export default function Card(props: CardProps) {
   const handleCardClick = () => {
@@ -17,6 +19,9 @@ export default function Card(props: CardProps) {
   };
   return (
     <motion.article
+      ref={props.cardRef}
+      onHoverStart={props.onFocus}
+      onTapStart={props.onFocus}
       initial={{ opacity: 0 }}
       animate={{ x: props.xAnimate, y: props.yAnimate, opacity: 1 }}
       drag
@@ -25,7 +30,7 @@ export default function Card(props: CardProps) {
         scale: 1.05,
         backgroundColor: props.backgroundColor,
         color: props.color,
-        zIndex: 2,
+        // zIndex: 2,
         border: "none",
         transition: { duration: 0.3 },
       }}
@@ -33,7 +38,7 @@ export default function Card(props: CardProps) {
         backgroundColor: props.backgroundColor,
         color: props.color,
         border: "none",
-        zIndex: 2,
+        // zIndex: 2,
         transition: { duration: 0.3 },
       }}
       className={styles.card}

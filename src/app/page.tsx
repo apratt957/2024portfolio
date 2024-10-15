@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { work } from "./work";
-import { getRandom, colors } from "@/helpers";
+import { getRandom } from "@/helpers";
 import Card from "./card";
 import styles from "./page.module.css";
 
@@ -17,6 +17,19 @@ export default function Home() {
   }, []);
 
   const constraintsRef = useRef(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const handleFocus = (index: number) => {
+    cardRefs.current.forEach((ref, i) => {
+      if (ref) {
+        if (i === index) {
+          ref.style.zIndex = '10';
+        } else {
+          ref.style.zIndex = '1';
+        }
+      }
+    });
+  };
 
   return (
     <motion.main ref={constraintsRef} className={styles.main}>
@@ -60,6 +73,8 @@ export default function Home() {
             yAnimate={getRandom(windowHeight)}
             backgroundColor={project.backgroundColor}
             color={project.color}
+            cardRef={(el) => (cardRefs.current[index] = el)}
+            onFocus={() => handleFocus(index)}
           />
         ))}
       </Fragment>
