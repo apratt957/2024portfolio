@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ currentProject }) => {
         }}
         onClick={handleBackButtonClick}
       >
-        <Image src="/back.svg" alt="back" height={80} width={80} />
+        <Image className="back-button" src="/back.svg" alt="back" height={80} width={80} />
       </motion.div>
       <h1 className={styles.headerTitle}>{currentProject.title}</h1>
       <div>{currentProject.description}</div>

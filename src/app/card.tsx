@@ -30,15 +30,11 @@ export default function Card(props: CardProps) {
         scale: 1.05,
         backgroundColor: props.backgroundColor,
         color: props.color,
-        // zIndex: 2,
-        border: "none",
         transition: { duration: 0.3 },
       }}
       whileTap={{
         backgroundColor: props.backgroundColor,
         color: props.color,
-        border: "none",
-        // zIndex: 2,
         transition: { duration: 0.3 },
       }}
       className={styles.card}
