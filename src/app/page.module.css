@@ -22,11 +22,11 @@
   top: 50vh;
 }
 
-.cardDescription {
+.cardDescription > a {
   cursor: pointer;
 }
 
-.cardDescription:hover {
+.cardDescription > a:hover {
   text-decoration: underline;
 }
 

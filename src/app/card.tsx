@@ -41,8 +41,8 @@ export default function Card(props: CardProps) {
       style={{ border: `2.5px solid ${props.backgroundColor}` }}
     >
       <div className={styles.h1Container}>
-        <h1 className={styles.cardDescription} onClick={handleCardClick}>
-          {props.description}
+        <h1 className={styles.cardDescription}>
+          <a onClick={handleCardClick}>{props.description}</a>
         </h1>
       </div>
       <div className={styles.titleContainer}>
